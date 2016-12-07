@@ -1,0 +1,32 @@
+This is an ERROR message.
+This is a WARN message.
+This is an INFO message.
+This is a DEBUG message.
+This is a TRACE message.
+This is an ERROR message.
+This is a WARN message.
+This is an INFO message.
+This is a DEBUG message.
+This is an ERROR message.
+This is an ERROR message.
+This is a WARN message.
+This is an ERROR message.
+This is a WARN message.
+This is an ERROR message.
+This is an INFO message.
+This is a WARN message.
+This is an ERROR message.
+This is a DEBUG message.
+This is an INFO message.
+This is a WARN message.
+This is an ERROR message.
+This is a TRACE message.
+This is a DEBUG message.
+This is an INFO message.
+This is a WARN message.
+This is an ERROR message.
+2016-12-07 16:06:34,638 main TRACE com.example.sample.App - This is a TRACE message.
+2016-12-07 16:06:34,639 main DEBUG com.example.sample.App - This is a DEBUG message.
+2016-12-07 16:06:34,639 main INFO  com.example.sample.App - This is an INFO message.
+2016-12-07 16:06:34,639 main WARN  com.example.sample.App - This is a WARN message.
+2016-12-07 16:06:34,639 main ERROR com.example.sample.App - This is an ERROR message.
