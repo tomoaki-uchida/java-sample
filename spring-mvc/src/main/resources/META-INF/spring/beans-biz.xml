@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ====================================================
+	ビジネスロジックのBean定義ファイル
+ ==================================================== -->
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<!-- サービスクラス（スキャン設定） -->
+	<context:component-scan base-package="sample.customer.biz.service"/>
+
+	<!-- メッセージ -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<!-- messages_{言語コード}.properties を読み込み -->
+		<property name="basename" value="classpath:/META-INF/messages"/>
+	</bean>
+
+	<!-- バリデーション -->
+	<bean id="globalValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource"/>
+	</bean>
+
+</beans>

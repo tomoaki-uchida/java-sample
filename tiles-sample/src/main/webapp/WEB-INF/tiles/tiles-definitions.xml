@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- ベースレイアウト（画面ごとに変更無し） -->
+	<definition name="baseLayout" template="/WEB-INF/views/common/layout.jsp">
+		 <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		 <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+	</definition>
+
+	<!-- views直下のファイル指定 -->
+	<definition name="*" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+
+	<!-- views直下以外のファイル指定 -->  
+	<definition name="*/*" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+
+</tiles-definitions>
